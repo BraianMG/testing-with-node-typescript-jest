@@ -1,5 +1,9 @@
 # Unit Testing for Typescript & NodeJs Developers with Jest
 
+- __Todas las lecciones de código tienen diffs en GitHub__
+- Versión de Node utilizada: __18.14.2__
+- Repo: [https://github.com/alexhddev/TSTestCourse](https://github.com/alexhddev/TSTestCourse)
+
 ## Secciones 1
 Introducción al curso
 
@@ -54,10 +58,3 @@ Repaso de TypeScript
 
 ## Sección 14
 Bonus
-
-NOTAS:
-- __Todas las lecciones de código tienen diffs en GitHub__
-- Versión de Node utilizada: __18.14.2__
-
-
-
