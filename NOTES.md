@@ -27,3 +27,4 @@ Otros principios:
 ## Métodos de Jest
 toBe() --> para valores primitivos
 toEqual() --> para objetos
+toBeTruthy() --> para comprobar si está o no definido un objeto cuando no estamos seguros de la estructura que recibimos

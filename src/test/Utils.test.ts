@@ -13,28 +13,57 @@ describe('Utils test suite', () => {
     expect(actual).toBe(expected);
   });
 
-  it.only('should return info for valid string', () => {
-    // arrange:
+  describe('getStringInfo for arg My-String should', () => {
+    test('return right length', () => {
+      // act:
+      const actual = getStringInfo('My-String');
 
-    // act:
-    const actual = getStringInfo('My-String');
+      // assert:
+      expect(actual.characters).toHaveLength(9);
+    });
 
-    // assert:
-    expect(actual.lowerCase).toBe('my-string');
-    expect(actual.extraInfo).toEqual({});
-    
-    expect(actual.characters.length).toBe(9);
-    expect(actual.characters).toHaveLength(9); // more readable
+    test('return right lower case', () => {
+      // act:
+      const actual = getStringInfo('My-String');
 
-    expect(actual.characters).toEqual(['M', 'y', '-', 'S', 't', 'r', 'i', 'n', 'g']);
-    expect(actual.characters).toContain<string>('M');
-    expect(actual.characters).toEqual(
-      expect.arrayContaining(['S', 't', 'r', 'i', 'n', 'g', 'M', 'y', '-']),
-    );
+      // assert:
+      expect(actual.lowerCase).toBe('my-string');
+    });
 
-    expect(actual.extraInfo).not.toBe(undefined);
-    expect(actual.extraInfo).not.toBeUndefined();
-    expect(actual.extraInfo).toBeDefined();
-    expect(actual.extraInfo).toBeTruthy(); // to check whether or not there are defined objects when we are not sure of the structure we receive
+    test('return right upper case', () => {
+      // act:
+      const actual = getStringInfo('My-String');
+
+      // assert:
+      expect(actual.upperCase).toBe('MY-STRING');
+    });
+
+    test('return right characters', () => {
+      // act:
+      const actual = getStringInfo('My-String');
+
+      // assert:
+      expect(actual.characters).toEqual(['M', 'y', '-', 'S', 't', 'r', 'i', 'n', 'g']);
+      expect(actual.characters).toContain<string>('M');
+      expect(actual.characters).toEqual(
+        expect.arrayContaining(['S', 't', 'r', 'i', 'n', 'g', 'M', 'y', '-']),
+      );
+    });
+
+    test('return defined extra info', () => {
+      // act:
+      const actual = getStringInfo('My-String');
+
+      // assert:
+      expect(actual.extraInfo).toBeDefined();
+    });
+
+    test('return right extra info', () => {
+      // act:
+      const actual = getStringInfo('My-String');
+
+      // assert:
+      expect(actual.extraInfo).toEqual({});
+    });
   });
 });
