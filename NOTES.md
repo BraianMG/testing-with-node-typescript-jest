@@ -23,3 +23,7 @@ Principios AAA:
 Otros principios:
 - setup (configuración): similar a arrange, de momento no se ve en el curso
 - teardown (deshacer): para destruir o deshacer los cambios generados tras la ejecución de una prueba, utilizados para pruebas más complejas, de momento no se ve en el curso
+
+## Métodos de Jest
+toBe() --> para valores primitivos
+toEqual() --> para objetos
