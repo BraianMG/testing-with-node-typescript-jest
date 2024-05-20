@@ -24,10 +24,16 @@ Otros principios:
 - setup (configuración): similar a arrange, de momento no se ve en el curso
 - teardown (deshacer): para destruir o deshacer los cambios generados tras la ejecución de una prueba, utilizados para pruebas más complejas, de momento no se ve en el curso
 
-## Métodos de Jest
-toBe() --> para valores primitivos
-toEqual() --> para objetos
-toBeTruthy() --> para comprobar si está o no definido un objeto cuando no estamos seguros de la estructura que recibimos
+## Jest: métodos, hooks y otras cosas
+- Métodos
+  - toBe() --> para valores primitivos
+  - toEqual() --> para objetos
+  - toBeTruthy() --> para comprobar si está o no definido un objeto cuando no estamos seguros de la estructura que recibimos
+- hooks: nos ayudarán a reducir la duplicidad de código porque muchas veces este paso de configuración (setup) será el mismo para todas las pruebas, lo ponemos en un solo gancho y será llamado en cada prueba. __El contexto o scope en el que actuan es muy importante, se ejecutan siempre en relación a su bloque describe, si se pone en un archivo de nivel superior, es decir, fuera del describe, se ejecutarán antes de cada prueba, pero una buena práctica es poner todos nuestros hooks dentro del bloque describe__
+  - beforeEach: en la mayoría de los casos para la configuración (setup) de cada test incluso parte de la organización (arrange)
+  - afterEach: generalmente utilizado para limpiar mocks
+  - beforeAll: lo usamos menos, por lo general se utiliza cuando hacemos pruebas de integración. Por ejemplo, inicializar una conexión a una base de datos
+  - afterAll: lo usamos menos, por lo general se utiliza cuando hacemos pruebas de integración. Por ejemplo, desmontar la conexión a la base de datos
 
 ## Principios F.I.R.S.T
 Esto se trata de un principio, no una regla, que podemos seguir a la hora de escribir nuestras pruebas.
