@@ -34,6 +34,18 @@ Otros principios:
   - afterEach: generalmente utilizado para limpiar mocks
   - beforeAll: lo usamos menos, por lo general se utiliza cuando hacemos pruebas de integración. Por ejemplo, inicializar una conexión a una base de datos
   - afterAll: lo usamos menos, por lo general se utiliza cuando hacemos pruebas de integración. Por ejemplo, desmontar la conexión a la base de datos
+- test properties:
+  - only: para ejecutar suites o pruebas específicas (esta propiedad tiene algunos alias)
+  - skip: para saltar suites o pruebas específicas (esta propiedad tiene algunos alias)
+  - todo: para indicar que la implementación para ese test aún se debe hacer. Muy útil para definir el esqueleto de nuestras pruebas o con TDD por ejemplo
+  - concurrent: para ejecutar varias pruebas en simultaneo
+- test aliases: son la misma cosa pero con nombres diferentes
+  - it: igual a test
+  - test: igual it
+  - xit: igual a it.skip o test.skip
+  - fit: igual a it.only o test.only
+- watch mode: nos facilita la ejecución frecuente de nuestros tests
+  - Podemoes hacerlo agregando la config `watch: true` en la config de jest o agregando el flag `--watch` en el comando para ejecutar nuestros tests
 
 ## Principios F.I.R.S.T
 Esto se trata de un principio, no una regla, que podemos seguir a la hora de escribir nuestras pruebas.

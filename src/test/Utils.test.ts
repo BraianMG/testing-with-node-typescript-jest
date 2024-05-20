@@ -1,7 +1,7 @@
 import { getStringInfo, StringUtils, toUpperCase } from '../Utils';
 
 describe('Utils test suite', () => {
-  describe.only('StringUtils tests', () => {
+  describe('StringUtils tests', () => {
     let sut: StringUtils;
 
     beforeEach(() => {
@@ -33,7 +33,7 @@ describe('Utils test suite', () => {
       }).toThrow('Invalid argument!');
     });
 
-    it.only('Should throw error on invalid argument - try catch block', (done) => {
+    it('Should throw error on invalid argument - try catch block', (done) => {
       try {
         sut.toUpperCase('');
         done('GetStringInfo should throw error for invalid arg!'); // workaround for issue https://github.com/jestjs/jest/issues/11698
