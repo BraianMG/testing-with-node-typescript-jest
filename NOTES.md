@@ -28,3 +28,73 @@ Otros principios:
 toBe() --> para valores primitivos
 toEqual() --> para objetos
 toBeTruthy() --> para comprobar si está o no definido un objeto cuando no estamos seguros de la estructura que recibimos
+
+## Principios F.I.R.S.T
+Esto se trata de un principio, no una regla, que podemos seguir a la hora de escribir nuestras pruebas.
+- Fast (rápido)
+- Independent (independiente)
+- Repeatable (repetible)
+- Self-validating (autovalidante)
+- Thorough (exhaustivo)
+
+### Fast (rápido)
+- Los test unitarios deben ser rápidos.
+  - En general tests más rápidos significa obtener feedback más rápido.
+
+Esto no significa que deban ser pocas, podríamos tener cientos, miles o más tests unitarios, por esto es que deben ser rápidos.
+
+### Independent/isolated (independiente)
+- Los tests deben ser aislados de:
+  - Otros tests
+  - Entornos externos:
+    - Pruebas sin estado compartido no deben compartir estado con otros tests
+    - El orden en que se ejecutan los tests no debería importar
+    - Contradicción con el principio F(fast):
+      - Tests individuales toman más tiempo de configuración
+
+### Repeatable (repetible)
+- Para la mismo entrada deberíamos obtener el mismo resultado:
+  - Reto: Pruebas que comprueban valores aleatorios o de fecha (siempre cambiarán), en estos casos vamos a utilizar mocks
+- Ejemplo: tests que escriben en una base de datos (compartiran algún tipo de estado con otros tests):
+  - Esto significa que despues de escribir en una base de datos siempre debemos limpiarla luego de ejecutado el test
+- Contradicción con el principio F(fast):
+  - Necesitamos más configuración y operaciones de desmontaje/limpieza si queremos que sean repetibles
+
+### Self-validating (autovalidante)
+- Luego de que un test finaliza, su resultado debe ser limpiado
+  - Pass/fail: Una prueba debe pasar o fallar
+
+### Thorough (exhaustivo)
+- Cubrir todos los casos/caminos/escenarios
+  - Difícil pensar en todos ellos desde el principio
+- Siempre deberíamos probar:
+  - Casos felices
+  - Casos malos
+  - Casos extremos
+  - Malos paths
+  - Entradas inválidas
+  - Valores grandes
+- Una cobertura del 100% del códgio no es un gran indicador
+  - No significa que tengamos pruebas exhaustivas
+  - Es un indicador de la calidad del código
+  - No es un buen indicador de la minuciosidad de la pruebas
+  - Debemos asegurarnos de escribir tests para el mayor número de posibles casos de uso
+
+### Ilustración
+- Un tester entra a un bar:
+  - Se encuentra con un bar
+  - Ingresa al bar
+  - Baila en el bar
+  - Salta en el bar
+  - Y ordena:
+    - Una cerveza
+    - 2 cervezas
+    - 0 cervezas
+    - 1 millon cervezas
+    - -1 cervezas
+    - A cerveza Lizard 
+- Pruebas completadas 🙂
+
+- Un cliente real ingresa al bar
+  - Pregunta donde está el baño
+- Sistema roto (por no tenerlo implementado)
