@@ -5,6 +5,12 @@ const config: Config.InitialOptions = {
   testEnvironment: 'node',
   verbose: true,
   testPathIgnorePatterns: ['/node_modules/', '/repo-original'],
+  collectCoverage: true,
+  collectCoverageFrom: [
+    '<rootDir>/src/app/**/*.ts',
+    '!<rootDir>/node_modules/**',
+    '!<rootDir>/repo-original/**',
+  ],
 };
 
 export default config;

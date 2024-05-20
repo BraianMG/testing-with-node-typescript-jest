@@ -1,4 +1,4 @@
-import { getStringInfo, StringUtils, toUpperCase } from '../Utils';
+import { getStringInfo, StringUtils, toUpperCase } from '../app/Utils';
 
 describe('Utils test suite', () => {
   describe('StringUtils tests', () => {
@@ -17,7 +17,6 @@ describe('Utils test suite', () => {
     it('Should return correct upperCase', () => {
       const actual = sut.toUpperCase('abc');
       expect(actual).toBe('ABC');
-      console.log('Actual test');
     });
 
     it('Should hrow error on invalid argument - function', () => {

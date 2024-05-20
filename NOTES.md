@@ -49,6 +49,9 @@ Otros principios:
 - Recetas: https://github.com/microsoft/vscode-recipes
   - En este caso para Jest: https://github.com/microsoft/vscode-recipes/tree/main/debugging-jest-tests
     - Otra de hacerlo es ejecutando el comando de test desde la terminal de debug JavaScript "JavaScript Debug Terminal" en la lista de terminales disponibles en VScode
+- istanbul ignore: https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md
+  - Es una biblioteca que utilizan todos los principales frameworks de pruebas de JavaScript
+  - Entre otras cosas podremos eliminar partes específicas de nuestro código del informe de covertura
 
 ## Principios F.I.R.S.T
 Esto se trata de un principio, no una regla, que podemos seguir a la hora de escribir nuestras pruebas.
