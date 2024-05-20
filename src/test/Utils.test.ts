@@ -19,6 +19,30 @@ describe('Utils test suite', () => {
       expect(actual).toBe('ABC');
       console.log('Actual test');
     });
+
+    it('Should hrow error on invalid argument - function', () => {
+      function expectError() {
+        const actual = sut.toUpperCase('');
+      }
+      expect(expectError).toThrow('Invalid argument!');
+    });
+
+    it('Should throw error on invalid argument - arrow function', () => {
+      expect(() => {
+        sut.toUpperCase('');
+      }).toThrow('Invalid argument!');
+    });
+
+    it.only('Should throw error on invalid argument - try catch block', (done) => {
+      try {
+        sut.toUpperCase('');
+        done('GetStringInfo should throw error for invalid arg!'); // workaround for issue https://github.com/jestjs/jest/issues/11698
+      } catch (error) {
+        expect(error).toBeInstanceOf(Error);
+        expect(error).toHaveProperty('message', 'Invalid argument!');
+        done(); // workaround
+      }
+    });
   });
 
   it('should return uppercase of valid string', () => {
