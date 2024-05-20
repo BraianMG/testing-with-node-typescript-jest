@@ -46,6 +46,9 @@ Otros principios:
   - fit: igual a it.only o test.only
 - watch mode: nos facilita la ejecución frecuente de nuestros tests
   - Podemoes hacerlo agregando la config `watch: true` en la config de jest o agregando el flag `--watch` en el comando para ejecutar nuestros tests
+- Recetas: https://github.com/microsoft/vscode-recipes
+  - En este caso para Jest: https://github.com/microsoft/vscode-recipes/tree/main/debugging-jest-tests
+    - Otra de hacerlo es ejecutando el comando de test desde la terminal de debug JavaScript "JavaScript Debug Terminal" en la lista de terminales disponibles en VScode
 
 ## Principios F.I.R.S.T
 Esto se trata de un principio, no una regla, que podemos seguir a la hora de escribir nuestras pruebas.
