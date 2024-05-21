@@ -187,4 +187,7 @@ Aunque mantienen muchas de las funcionalidades que también ofrecen los mocks, h
 - La mejor forma de entender cómo funcionan los Spies es trabajando con clases en lugar de funciones.
 - Tambien pueden espiar módulos externos
 - Otra cosa para lo que se usan los Spies es para cambiar la implementación de un cierto método
-  - Un ejemplo de esto podría ser un método que llama a algún servicio de Internet y no queremos que eso ocurra desde nuestras pruebas unitarias 
+  - Un ejemplo de esto podría ser un método que llama a algún servicio de Internet y no queremos que eso ocurra desde nuestras pruebas unitarias
+
+### Mocking modules
+Con `jest.mock` podemos simular módulos enteros o solo partes, incluso si son módulos nuestros o externos
