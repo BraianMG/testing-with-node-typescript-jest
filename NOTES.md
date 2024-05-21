@@ -135,3 +135,14 @@ Esto no significa que deban ser pocas, podríamos tener cientos, miles o más te
   - Test fallido (rojo): primero escribimos las pruebas y como no hay implementación, estas fallarán
   - Test pasado (verde): escribiremos la implementación para que los tests pasen
   - Cambiar/añadir lógica (azul): finalmente somo libres para cambiar o agregar lógica
+
+### Codgin project: password checker
+- Simples requerimientos, grandes complicaciones
+- Requerimientos
+  - Iteración 1:
+    - Una contraseña es inválida si:
+      - Longitud menor a 8 caracteres
+      - No tiene una letra mayúscula
+      - No tiene una letra minúscula
+  - Iteración 2: retornar la razón de ser inválida
+  - Iteración 3:la contraseña de administrador también debe contener un número
