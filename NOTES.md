@@ -173,4 +173,7 @@ Una analogía es en las películas cuando utilizan un doble en lugar del actor r
 Lo importante es que no deberíamos utilizarlos dentro de nuestras aserciones, son los objetos auxiliares que nos ayudan a realizar pruebas
 
 ### Fakes
-No son más que implementaciones simplificadas de diferentes funcionalidades que utilizamos, una limitante de estos es que no podemos afirmar nada sobre ellos, para eso necesitamos un ojeto de pruebas fake más complejo
+No son más que implementaciones simplificadas de diferentes funcionalidades que utilizamos, una limitante de estos es que no podemos afirmar nada sobre ellos, para eso necesitamos un ojeto de pruebas fake más complejo (mocks)
+
+### Mocks
+Podemos crearlos nosotros mismos a mano o Jest nos puede asistir en esa dirección. De estos objetos podemos obtener mucha más información para hacer afirmaciones sobre ellos
