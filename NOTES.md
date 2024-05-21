@@ -146,5 +146,5 @@ Esto no significa que deban ser pocas, podríamos tener cientos, miles o más te
       - No tiene una letra minúscula
   - Iteración 2: aquí tambien nos ocupamos de refactorizar la implementación para facilitar los tests
     - Retornar la razón de ser inválida
-  - Iteración 3:
+  - Iteración 3: aquí también refactorizamos la clase PasswordChecker para que sea más legible
     - La contraseña de administrador también debe contener un número
