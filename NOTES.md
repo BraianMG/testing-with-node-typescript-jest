@@ -139,10 +139,12 @@ Esto no significa que deban ser pocas, podríamos tener cientos, miles o más te
 ### Codgin project: password checker
 - Simples requerimientos, grandes complicaciones
 - Requerimientos
-  - Iteración 1:
+  - Iteración 1: simple implementación pero fue difícil hacer pruebas, indicador de una mala implementacón y deberíamos refactorizar o adoptar otro enfoque que facilite la spruebas
     - Una contraseña es inválida si:
       - Longitud menor a 8 caracteres
       - No tiene una letra mayúscula
       - No tiene una letra minúscula
-  - Iteración 2: retornar la razón de ser inválida
-  - Iteración 3:la contraseña de administrador también debe contener un número
+  - Iteración 2: aquí tambien nos ocupamos de refactorizar la implementación para facilitar los tests
+    - Retornar la razón de ser inválida
+  - Iteración 3:
+    - La contraseña de administrador también debe contener un número
