@@ -161,7 +161,7 @@ Una analogía es en las películas cuando utilizan un doble en lugar del actor r
     - Stubs: son objetos incompletos utilizados como argumentos
     - Spies: son objetos que rastreaninformación sobre cómo se llama a una unidad
     - Mocks: se los programa con expectativas
-  - Nota de Jest: mocks y spies tienen mucho en común, a vece sla documentación puede resultar un poco engañosa
+  - Nota de Jest: mocks y spies tienen mucho en común, a veces la documentación puede resultar un poco engañosa
   - Nota de popularidad: spies y mocks son la forma más popular de utilizar dobles de prueba
   - Nota de mocks: 
     - El cómo usarlos es muy debatido
@@ -177,3 +177,14 @@ No son más que implementaciones simplificadas de diferentes funcionalidades que
 
 ### Mocks
 Podemos crearlos nosotros mismos a mano o Jest nos puede asistir en esa dirección. De estos objetos podemos obtener mucha más información para hacer afirmaciones sobre ellos
+
+### Spies
+Aunque mantienen muchas de las funcionalidades que también ofrecen los mocks, hay algunas diferencias en la forma de trabajar de los spies
+- Spies vs Mocks:
+  - Los Spies no se injectan directamente en SUT (system under test), solo proporciona una funcionalidad diferente en la que estamos utilizando spies
+  - Los Spies mantienen la funcionalidad original que espían
+  - Los Spies suelen ser utilizados para rastrear las llamadas a métodos dentro de los objetos
+- La mejor forma de entender cómo funcionan los Spies es trabajando con clases en lugar de funciones.
+- Tambien pueden espiar módulos externos
+- Otra cosa para lo que se usan los Spies es para cambiar la implementación de un cierto método
+  - Un ejemplo de esto podría ser un método que llama a algún servicio de Internet y no queremos que eso ocurra desde nuestras pruebas unitarias 
