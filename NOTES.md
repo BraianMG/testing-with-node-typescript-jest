@@ -168,3 +168,6 @@ Una analogía es en las películas cuando utilizan un doble en lugar del actor r
     - La forma en que los utilizamos influye enormemente en la forma que escribimos las pruebas
     - Si los utilizamos demaciado, es indicio de que hay algo mal en nuestro código
     - Existen diferentes estilos de testear/mockear como London/Chicago
+
+### Stubs
+Lo importante es que no deberíamos utilizarlos dentro de nuestras aserciones, son los objetos auxiliares que nos ayudan a realizar pruebas
