@@ -149,3 +149,22 @@ Esto no significa que deban ser pocas, podríamos tener cientos, miles o más te
   - Iteración 3: aquí también refactorizamos la clase PasswordChecker para que sea más legible
     - La contraseña de administrador también debe contener un número
 - Ejercicio de codificación 1: [Game coding exercise](/src//app/game_coding_exercise/)
+
+## Test doubles (dobles de prueba)
+Una analogía es en las películas cuando utilizan un doble en lugar del actor real
+- ¿Qué son y porqué los necesitamos?
+  - Los necesitamos porque algunas unidades no son ápidas o no son fácilmente accesibles, entonces las reemplazamos en nuestros tests, por ejemplo una base de datos
+  - Son objetos ficticios que podemos utilizar en lugar de un objeto real con fines prueba
+  - Tipos en orden de dificultad/complejidad ascendente:
+    - Dommu objects: simplemente se pasa pero no se utiliza 
+    - Fakes: simplifican el trabajo de implementación de implementaciones que toman un atajo. Por ejemplo, un servicio que accede a otro servicio el cual accede a un servicio de inicio de sesión, el cual accede a una base de datos, etc, etc, quí podemos hacer un falso servicio de login que simplemente devuelva true o false en base a nuestros requerimientos
+    - Stubs: son objetos incompletos utilizados como argumentos
+    - Spies: son objetos que rastreaninformación sobre cómo se llama a una unidad
+    - Mocks: se los programa con expectativas
+  - Nota de Jest: mocks y spies tienen mucho en común, a vece sla documentación puede resultar un poco engañosa
+  - Nota de popularidad: spies y mocks son la forma más popular de utilizar dobles de prueba
+  - Nota de mocks: 
+    - El cómo usarlos es muy debatido
+    - La forma en que los utilizamos influye enormemente en la forma que escribimos las pruebas
+    - Si los utilizamos demaciado, es indicio de que hay algo mal en nuestro código
+    - Existen diferentes estilos de testear/mockear como London/Chicago
