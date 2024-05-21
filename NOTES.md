@@ -122,3 +122,16 @@ Esto no significa que deban ser pocas, podríamos tener cientos, miles o más te
 - Un cliente real ingresa al bar
   - Pregunta donde está el baño
 - Sistema roto (por no tenerlo implementado)
+
+## TDD (Test Driven Development o desarrollo dirigido por pruebas)
+- Reglas clave de TDD
+  - Primero debemos escribir nuestras pruebas, con esto sabremos desde el principio exactamente qué requisitos tenemos par nuestro código
+  - Luego escribir nuestra implementación
+- Un desvio en grandes proyectos
+  - En proyectos con 1 o 2 millones de líneas de código no queremos empezar escribiendo 2 o 3 millones de líneas de código de pruebas para luego escribir la implementación, no funciona así
+  - Primero debemos alcanzar un estado de funcionamiento (cuando sabemos exactamente o tenemos una idea de cómo será la aplicación, que frameworks utilizaremos, qué patrones de diseño, etc) y luego escribir pruebas
+- TDD es excelente para ampliar una aplicación y corregir errores
+- El ciclo TDD (rojo, verde, azul)
+  - Test fallido (rojo): primero escribimos las pruebas y como no hay implementación, estas fallarán
+  - Test pasado (verde): escribiremos la implementación para que los tests pasen
+  - Cambiar/añadir lógica (azul): finalmente somo libres para cambiar o agregar lógica
