@@ -148,3 +148,4 @@ Esto no significa que deban ser pocas, podríamos tener cientos, miles o más te
     - Retornar la razón de ser inválida
   - Iteración 3: aquí también refactorizamos la clase PasswordChecker para que sea más legible
     - La contraseña de administrador también debe contener un número
+- Ejercicio de codificación 1: [Game coding exercise](/src//app/game_coding_exercise/)
