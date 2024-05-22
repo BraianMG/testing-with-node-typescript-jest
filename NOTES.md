@@ -216,3 +216,9 @@ Con `jest.mock` podemos simular módulos enteros o solo partes, incluso si son m
   - La mejor forma de definir una unidad es "una unidad" = "un requerimiento"
     - Si una unidad es un requerimiento, también las pruebas deben reflejar ese requerimiento
     - Si nuestras unidades son requerimientos, nuestras pruebas serán muy potentes
+
+### Aplicación simple de gestión de reservaciones
+- Requerimientos
+  - Los usuarios pueden registrarse con un username y password
+  - Los usuarios pueden iniciar sesión con un username y password
+  - Los usuarios que iniciaron sesión pueden crear, ver, actualizar y eliminar reservaciones
