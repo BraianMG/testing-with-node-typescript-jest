@@ -191,3 +191,28 @@ Aunque mantienen muchas de las funcionalidades que también ofrecen los mocks, h
 
 ### Mocking modules
 Con `jest.mock` podemos simular módulos enteros o solo partes, incluso si son módulos nuestros o externos
+
+## Test doubles en la práctica
+- TDD estilos/escuelas: London y Chicago (Detroit)
+  - Los nombres son solo para impresionar no significan nada en cuanto al estilo
+  - Representan algunas formas enq ue podemos utilizar mocks
+- Entender las diferencias en estilos de pruebas
+  - Para saber qué estilo adoptar una pregunta clave que debemos repsonder es ¿Qué es una unidad?
+    - Una clase?
+    - Una función?
+    - Una funcionalidad?
+  - Responder esto adecuadamente producira tener un estilo adecuado de pruebas unitarias
+- Chicago
+  - Adopta un enfoque bajo en mocks
+  - Una unidad es una colección de piezas
+  - Las pruebas son más complejas y se realizan desde una perspectiva mucho más amplia, esto significa que varios componentes se prueban juntos
+  - Hace poco uso de mocks
+- London
+  - Adopta un enfoque de uso intensivo de mocks
+  - Una unidad es una clase
+    - Debemos mockear todas sus dependencias
+- Recomendaciones del profesor en base a su experienia
+  - Tener un enfoque moderado es lo mejor
+  - La mejor forma de definir una unidad es "una unidad" = "un requerimiento"
+    - Si una unidad es un requerimiento, también las pruebas deben reflejar ese requerimiento
+    - Si nuestras unidades son requerimientos, nuestras pruebas serán muy potentes
