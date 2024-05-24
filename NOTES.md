@@ -222,3 +222,6 @@ Con `jest.mock` podemos simular módulos enteros o solo partes, incluso si son m
   - Los usuarios pueden registrarse con un username y password
   - Los usuarios pueden iniciar sesión con un username y password
   - Los usuarios que iniciaron sesión pueden crear, ver, actualizar y eliminar reservaciones
+
+### Mockeando consumidores de clases (o ¿clases consumidoras?, no se cual es la forma correcta de traducir "consumer classes")
+Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAccess` sería un consumidor de clase, la clase `DataBase` no es inyectada en la clase `UserCredentialsDataAccess` sino que se crea directamente cuando se crea la clase `UserCredentialsDataAccess`. Esto plantea algunos retos importantes en materia de pruebas
