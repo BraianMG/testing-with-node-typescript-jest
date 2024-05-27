@@ -237,3 +237,8 @@ Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAcc
     - Pequeños cambios en implementaciones dará lugar a muchos cambios en nuestros tests. Las refactorizaciones serán un poco más difíciles
   - Son más difíciles de escribir
     - En Js/Ts no tenemos una librería que genere automaticamente mocks
+
+## Pruebas con pocos mocks (Low mock tests)
+- Mockearemos lo menos posible
+- Crearemos algunos objetos de envoltura que irán alrededor de las solicitudes y las respuestas
+- Lo único que mockearemos serán las llamadas a base de datos
