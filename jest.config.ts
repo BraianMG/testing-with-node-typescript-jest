@@ -1,7 +1,7 @@
 import { Config } from '@jest/types';
 
 const baseDir = '<rootDir>/src/app/server_app';
-const baseTestDir = '<rootDir>/src/test/server_app';
+const baseTestDir = '<rootDir>/src/test/server_app2';
 
 const config: Config.InitialOptions = {
   preset: 'ts-jest',
@@ -14,7 +14,7 @@ const config: Config.InitialOptions = {
     '!<rootDir>/node_modules/**',
     '!<rootDir>/repo-original/**',
   ],
-  testMatch: [`${baseTestDir}/**/*.ts`],
+  testMatch: [`${baseTestDir}/**/*test.ts`],
 };
 
 export default config;
