@@ -225,3 +225,15 @@ Con `jest.mock` podemos simular módulos enteros o solo partes, incluso si son m
 
 ### Mockeando consumidores de clases (o ¿clases consumidoras?, no se cual es la forma correcta de traducir "consumer classes")
 Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAccess` sería un consumidor de clase, la clase `DataBase` no es inyectada en la clase `UserCredentialsDataAccess` sino que se crea directamente cuando se crea la clase `UserCredentialsDataAccess`. Esto plantea algunos retos importantes en materia de pruebas
+
+### Conclusiones
+- Ventajas del enfoque de uso intensivo de mocks
+  - Podemos probar de forma aisalada todas las clases y métodos
+  - Impone un stricto estilo de código
+    - Ejemplo: muchas dependencias hacen a la clase dfícil de probar
+  - Una vez creados los tests, es fácil crear nuevos
+- Desventajas del enfoque de uso intensivo de mocks
+  - Los tests y las implementaciones estan estrechamente acoplados
+    - Pequeños cambios en implementaciones dará lugar a muchos cambios en nuestros tests. Las refactorizaciones serán un poco más difíciles
+  - Son más difíciles de escribir
+    - En Js/Ts no tenemos una librería que genere automaticamente mocks
