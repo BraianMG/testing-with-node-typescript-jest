@@ -244,3 +244,17 @@ Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAcc
 - Lo único que mockearemos serán las llamadas a base de datos
 - Pudimos comprobar con el informe de covertura de código que con un solo test tocamos más de una clase, y que este test fue a través de toda nuestra base de código. Esto significa que son más complejos y nos dan una mejor visión del funcionamiento de todo nuestro código.
 - Finalmente comprobamos que escribimos muchos menos tests, al principio tomo tiempo las configuraciones pero luego de que tenemos los wrappers fue más rápido escribir tests
+
+### Conclusiones
+- Ventajas
+  - Podemos probar más con menos código
+  - Fácil escribir y leer cada test
+  - Fácil de mantener
+- Desventajas
+  - Difícil cubrir casos extremos
+    - Nosotros no nos enfretamos a ello, pero en proyectos más complejos, algunos casos extremos realmente necesitan mucha más configuración y mucho más mocking, con este enfoque, intentar alcanzar el 100% de covertura, cubrir todos los casos de uso y los casos extremos es muy complicado
+  - Difícil configurar algunos casos
+    - En el cuso vimos un caso ideal, nuestra base de datos la teníamos en memoria
+    - En lugar de mockear la base de datos, podemos tener un contenedor Docker
+    - Otros servicios puede que tenga que ser dockerizado
+    - Desde el punto de vista CI/CD, es requerida mucha más configuración
