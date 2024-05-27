@@ -243,3 +243,4 @@ Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAcc
 - Crearemos algunos objetos de envoltura que irán alrededor de las solicitudes y las respuestas
 - Lo único que mockearemos serán las llamadas a base de datos
 - Pudimos comprobar con el informe de covertura de código que con un solo test tocamos más de una clase, y que este test fue a través de toda nuestra base de código. Esto significa que son más complejos y nos dan una mejor visión del funcionamiento de todo nuestro código.
+- Finalmente comprobamos que escribimos muchos menos tests, al principio tomo tiempo las configuraciones pero luego de que tenemos los wrappers fue más rápido escribir tests
