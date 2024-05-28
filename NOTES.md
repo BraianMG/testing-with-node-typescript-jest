@@ -258,3 +258,20 @@ Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAcc
     - En lugar de mockear la base de datos, podemos tener un contenedor Docker
     - Otros servicios puede que tenga que ser dockerizado
     - Desde el punto de vista CI/CD, es requerida mucha más configuración
+
+## Pruebas de integración (integration tests)
+- Se prueban multiples componentes juntos, comprobamos como interactúan entre sí
+  - En clases anteriores consideramos una ruta como una unidad
+- La diferencia clave es que par alas pruebas de integración queremos evitar en la medida de lo posible hacer mocks
+- Aún serán moqueados los componentes:
+  - DataBase
+  - Server
+- Cuando realizamos pruebas deintegración, queremos probar el sistema lo más cerca posible del despliegue real
+- Si queremos acercarnos lo más posible al despliegue real, podemos:
+  - Probar contra una etapa de prueba
+  - Tener un despliegue especial hecho solo para propósitos de prueba
+  - Estos podemos ejecutarlos tanto local como de forma remota
+- Como testearemos nuestro sistema:
+  - Lanzar la aplicación
+  - Usar como un usuario normal
+  - Hacer aserciones basados en los recursos
