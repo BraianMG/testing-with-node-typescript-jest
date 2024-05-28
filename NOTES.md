@@ -275,3 +275,10 @@ Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAcc
   - Lanzar la aplicación
   - Usar como un usuario normal
   - Hacer aserciones basados en los recursos
+
+## Otros temas de testing
+- Manejo de variables de entorno
+- Manejo de múltiples configuraciones de pruebas
+- Snapshot testing
+- Matchers personalizados
+- Runner de pruebas nativo de NodeJs
