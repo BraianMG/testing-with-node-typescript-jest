@@ -286,3 +286,21 @@ Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAcc
 - Matchers personalizados
 - Runner de pruebas nativo de NodeJs
   - Cambiar a rama `node-test-runner-trials` en `repo-original/TSTestCourse`
+
+### Comparación de framworks de testing
+https://npmtrends.com/jasmine-vs-jest-vs-mocha-vs-vitest
+- Jest:
+  - Corre tests, tiene mock y assert (tiene todo)
+- Mocha:
+  - Solo corre tests
+  - Si queremos mocks complejos usaremos SinonJs
+  - Si queremos asserts usaremos Chai
+- Ventajas de Jest:
+  - Una sola librería
+  - Fácil integración con TypeScript
+  - Popular (mejor soporte)
+  - Funcionalidades para pruebas de UI (React)
+- Ventajas de Mocha
+  - Funcionalidades más complejas
+  - Podemos definir en una sola línea el comportamiento de nuestros mocks
+    - `when(certainCall).thenReturn(certainResult)`
