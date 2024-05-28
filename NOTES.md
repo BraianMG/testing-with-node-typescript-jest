@@ -280,5 +280,8 @@ Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAcc
 - Manejo de variables de entorno
 - Manejo de múltiples configuraciones de pruebas
 - Snapshot testing
+  - Para probar objetos grandes
+  - Para probar componentes UI, lógica generada o las configuraciones JSON generadas
+  - En nuestro caso usamos el comando `npm run itest -- -u` para actualizar el snapshot
 - Matchers personalizados
 - Runner de pruebas nativo de NodeJs
