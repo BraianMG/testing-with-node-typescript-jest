@@ -285,3 +285,4 @@ Por ejemplo, `new DataBase<Account>();` en nuestra clase `UserCredentialsDataAcc
   - En nuestro caso usamos el comando `npm run itest -- -u` para actualizar el snapshot
 - Matchers personalizados
 - Runner de pruebas nativo de NodeJs
+  - Cambiar a rama `node-test-runner-trials` en `repo-original/TSTestCourse`
