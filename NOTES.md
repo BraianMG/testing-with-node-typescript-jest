@@ -304,3 +304,18 @@ https://npmtrends.com/jasmine-vs-jest-vs-mocha-vs-vitest
   - Funcionalidades más complejas
   - Podemos definir en una sola línea el comportamiento de nuestros mocks
     - `when(certainCall).thenReturn(certainResult)`
+
+## CI/CD con GitHub actions and Docker
+- Lo más frecuente es que los tests corran automáticamente en pipelines CI/CD
+- A lo largo del curso tuvimos un problema sin resolver: tests de bases de datos
+  - Veremos cómo podemos probar las operaciones de bases de datos con Docker
+- En esta sección haremos:
+  - Configurar GitHub actions
+  - Crear e integrar pull requests
+  - Tests de operaciones de bases de datos localmente con Docker
+  - Tests de operaciones de bases de datos en un pipeline con Docker y GitHub actions
+
+### ¿Qué es CI/CD?
+- Continuous Integration / Continuos Delivery (Integración Continua / Entrega Continua)
+- Es un método para entregar aplicaciones a los consumidores con frecuencia mediante la introducción de la automatización en las etapas de desarrollo de la aplicación
+- Repo en https://github.com/BraianMG/testing-cicd-github-actions-docker
