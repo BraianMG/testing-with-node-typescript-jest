@@ -319,3 +319,11 @@ https://npmtrends.com/jasmine-vs-jest-vs-mocha-vs-vitest
 - Continuous Integration / Continuos Delivery (Integración Continua / Entrega Continua)
 - Es un método para entregar aplicaciones a los consumidores con frecuencia mediante la introducción de la automatización en las etapas de desarrollo de la aplicación
 - Repo en https://github.com/BraianMG/testing-cicd-github-actions-docker
+
+### Acceder a una base de datos para pruebas
+- Las bases de datos estan seguras y son de difícil acceso (detras de una VPN)
+  - La configuración de conexión para acceder a ellas son muy difíciles y seguras, cómo debe ser
+- ¿Cómo podemos probar nuestras operaciones de base de datos?
+  - Podemos utilizar una simple base de datos local
+    - Opción complicada: configurar una implementación real de la base de datos, según la versión podría ser muy fácil o muy complicado
+    - Opción simple: utilizar Docker para tener una versión de una base de datos que pueda ser muy fácil de iniciar una vez que se configura dentro de un comando o un archivo de Docker. Tambien funcionan con CI/CD
