@@ -1,13 +1,14 @@
 # Unit Testing for Typescript & NodeJs Developers with Jest
 
+- Curso de Udemy: [Unit Testing for Typescript & NodeJs Developers with Jest](https://www.udemy.com/course/unit-testing-typescript-nodejs/)
 - __Todas las lecciones de código tienen diffs en GitHub__
 - Versión de Node utilizada: __18.14.2__
 - Repo: [https://github.com/alexhddev/TSTestCourse](https://github.com/alexhddev/TSTestCourse)
 
-## Secciones 1
+## Sección 1
 Introducción al curso
 
-## Secciones 2
+## Sección 2
 Temas __básicos__ de testing con Jest
 - Configuración Jest/TypesCrtip
 - Estructura apropiada de un unit test
@@ -21,7 +22,7 @@ Temas __intermedios__ de testing
 - Configuración de debug con VScode
 - Coverage
 
-## Secciones 4
+## Sección 4
 Test Driven Development
 - Primer proyecto del curso
   - Múltiples iteraciones
